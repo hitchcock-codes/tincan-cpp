@@ -1,1 +1,1 @@
-add_library(server chatengine.cpp clienthandler.cpp channel.cpp)
+add_library(server chatengine.cpp clienthandler.cpp clientchannel.cpp)

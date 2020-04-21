@@ -11,7 +11,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "channel.h"
+#include "clientchannel.h"
 #include "connectionhandler.h"
 
 using std::cerr;
@@ -92,7 +92,7 @@ void ChatEngine::start(short port, ConnectionHandler &handler) {
     }
 
     // Got a client connection. Create a channel and pass it to the handler.
-    Channel chan(client_fd);
+    ClientChannel chan(client_fd);
 
     handler(client_fd);
   } catch (std::exception &e) {
